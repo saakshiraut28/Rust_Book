@@ -1,7 +1,7 @@
 use std::io;
 
 fn print_board(board: &[[char; 3]; 3]) {
-    for i in 0..3 {
+    for i in 0..=2 {
         for j in 0..3 {
             print!("'{}' ", board[i][j]);
         }
@@ -19,7 +19,7 @@ fn next_player(player: char) -> char {
 
 fn is_win(board: &[[char; 3]; 3], player: char) -> bool {
     // Check rows
-    for i in 0..3 {
+    for i in 0..=2 {
         let mut win = true;
         for j in 0..3 {
             if board[i][j] != player {
